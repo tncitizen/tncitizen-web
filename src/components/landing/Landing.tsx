@@ -301,10 +301,9 @@ export default function Landing() {
       </section>
 
       {/* VISION */}
-      <section className="py-28 relative overflow-hidden">
-        <div className="absolute inset-0 -z-10 bg-[#052B5B]" />
-        <div className="absolute inset-0 -z-10 opacity-30 bg-[radial-gradient(circle_at_30%_50%,#0BA37F,transparent_50%),radial-gradient(circle_at_70%_50%,#1e40af,transparent_50%)] animate-gradient" />
-        <div className="mx-auto max-w-4xl px-5 lg:px-8 text-center text-white">
+      <section className="py-28 relative overflow-hidden bg-[#052B5B]">
+        <div className="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_30%_50%,#0BA37F,transparent_50%),radial-gradient(circle_at_70%_50%,#1e40af,transparent_50%)] animate-gradient" />
+        <div className="relative mx-auto max-w-4xl px-5 lg:px-8 text-center text-white">
           <Sparkles className="h-8 w-8 mx-auto text-emerald-300" />
           <p className="mt-6 text-3xl lg:text-5xl font-bold leading-tight tracking-tight">
             “Building the future of <span className="text-emerald-300">smart public safety</span> and connected governance in Tamil Nadu.”
