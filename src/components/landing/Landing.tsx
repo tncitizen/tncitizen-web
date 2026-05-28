@@ -79,13 +79,18 @@ export default function Landing() {
                 <Play className="h-4 w-4 text-[#0BA37F]" /> View Demo
               </a>
             </div>
-            <div className="mt-10 flex flex-wrap items-center gap-6">
-              <div className="flex items-center gap-2 text-sm text-slate-500">
-                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-semibold ring-1 ring-emerald-100">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                  Live
-                </span>
-                <span>Trusted across Tamil Nadu</span>
+            <div className="mt-10 flex flex-wrap items-center gap-4">
+              <div className="flex items-center gap-2 px-3.5 py-2 rounded-full bg-white shadow-sm ring-1 ring-slate-200">
+                <Building2 className="h-4 w-4 text-[#0BA37F]" />
+                <span className="text-sm font-semibold text-slate-700">50+ MLA Offices Onboarded</span>
+              </div>
+              <div className="flex items-center gap-2 px-3.5 py-2 rounded-full bg-white shadow-sm ring-1 ring-slate-200">
+                <ShieldCheck className="h-4 w-4 text-[#0BA37F]" />
+                <span className="text-sm font-semibold text-slate-700">Verified by Public Departments</span>
+              </div>
+              <div className="flex items-center gap-2 px-3.5 py-2 rounded-full bg-emerald-50 shadow-sm ring-1 ring-emerald-100">
+                <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+                <span className="text-sm font-semibold text-emerald-700">Trusted across Tamil Nadu</span>
               </div>
             </div>
 
@@ -317,14 +322,14 @@ export default function Landing() {
               <h2 className="text-4xl lg:text-6xl font-bold tracking-tight">Join TNCitizen Today</h2>
               <p className="mt-5 text-lg text-white/90 max-w-2xl mx-auto">Download the app and become part of a safer, smarter Tamil Nadu.</p>
               <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-                <a href="#" className="flex items-center gap-3 bg-black text-white px-6 py-3.5 rounded-2xl hover:scale-105 transition shadow-xl">
-                  <svg viewBox="0 0 24 24" className="h-7 w-7 fill-white"><path d="M17.05 12.04c-.02-2.27 1.85-3.36 1.93-3.42-1.05-1.54-2.69-1.75-3.27-1.78-1.39-.14-2.71.82-3.42.82-.71 0-1.79-.8-2.95-.78-1.52.02-2.92.88-3.7 2.24-1.58 2.73-.4 6.78 1.13 9 .75 1.09 1.64 2.3 2.81 2.26 1.13-.04 1.55-.73 2.91-.73s1.75.73 2.94.71c1.21-.02 1.98-1.1 2.72-2.19.86-1.26 1.21-2.49 1.23-2.56-.03-.01-2.36-.91-2.38-3.57zM14.94 5.34c.62-.76 1.04-1.81.92-2.86-.9.04-1.98.6-2.62 1.36-.58.67-1.09 1.74-.95 2.77 1 .08 2.03-.51 2.65-1.27z"/></svg>
-                  <div className="text-left"><div className="text-[10px] uppercase tracking-wide opacity-80">Download on the</div><div className="text-base font-semibold -mt-0.5">App Store</div></div>
+                <a href="https://play.google.com/store/apps/details?id=in.tncitizen.app" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 bg-white text-slate-900 px-6 py-3.5 rounded-2xl hover:scale-105 transition shadow-xl">
+                  <svg viewBox="0 0 24 24" className="h-7 w-7"><path fill="#EA4335" d="M3 20.5V3.5c0-.7.4-1.3 1-1.6l11 9.6L4 21.7c-.6-.3-1-.9-1-1.2z"/><path fill="#FBBC04" d="M16.8 13.5l-2.8 2.4 3.6 3.2c.6-.3 1-1 1-1.6 0-.7-.4-1.3-1-1.6l-.8-.4z"/><path fill="#34A853" d="M4 21.7L15 12l2.8 2.4-12.2 7c-.5.3-1.1.3-1.6.3z"/><path fill="#4285F4" d="M4 1.9l11 9.6L17.8 9 5.6 2c-.5-.3-1.1-.3-1.6-.1z"/></svg>
+                  <div className="text-left"><div className="text-[10px] uppercase tracking-wide opacity-60">Get it on</div><div className="text-base font-semibold -mt-0.5">Google Play</div></div>
                 </a>
-                <a href="#" className="flex items-center gap-3 bg-black text-white px-6 py-3.5 rounded-2xl hover:scale-105 transition shadow-xl">
-                  <svg viewBox="0 0 24 24" className="h-7 w-7"><path fill="#34A853" d="M3 20.5V3.5c0-.7.4-1.3 1-1.6l11 9.6L4 21.7c-.6-.3-1-.9-1-1.2z"/><path fill="#FBBC04" d="M16.8 13.5l-2.8 2.4 3.6 3.2c.6-.3 1-1 1-1.6 0-.7-.4-1.3-1-1.6l-.8-.4z"/><path fill="#EA4335" d="M4 21.7L15 12l2.8 2.4-12.2 7c-.5.3-1.1.3-1.6.3z"/><path fill="#4285F4" d="M4 1.9l11 9.6L17.8 9 5.6 2c-.5-.3-1.1-.3-1.6-.1z"/></svg>
-                  <div className="text-left"><div className="text-[10px] uppercase tracking-wide opacity-80">Get it on</div><div className="text-base font-semibold -mt-0.5">Google Play</div></div>
-                </a>
+                <div className="flex items-center gap-3 bg-white/20 backdrop-blur text-white/70 px-6 py-3.5 rounded-2xl ring-1 ring-white/20 cursor-not-allowed">
+                  <svg viewBox="0 0 24 24" className="h-7 w-7 fill-white/50"><path d="M17.05 12.04c-.02-2.27 1.85-3.36 1.93-3.42-1.05-1.54-2.69-1.75-3.27-1.78-1.39-.14-2.71.82-3.42.82-.71 0-1.79-.8-2.95-.78-1.52.02-2.92.88-3.7 2.24-1.58 2.73-.4 6.78 1.13 9 .75 1.09 1.64 2.3 2.81 2.26 1.13-.04 1.55-.73 2.91-.73s1.75.73 2.94.71c1.21-.02 1.98-1.1 2.72-2.19.86-1.26 1.21-2.49 1.23-2.56-.03-.01-2.36-.91-2.38-3.57zM14.94 5.34c.62-.76 1.04-1.81.92-2.86-.9.04-1.98.6-2.62 1.36-.58.67-1.09 1.74-.95 2.77 1 .08 2.03-.51 2.65-1.27z"/></svg>
+                  <div className="text-left"><div className="text-[10px] uppercase tracking-wide opacity-60">Coming Soon</div><div className="text-base font-semibold -mt-0.5 opacity-70">App Store</div></div>
+                </div>
               </div>
             </div>
           </div>
