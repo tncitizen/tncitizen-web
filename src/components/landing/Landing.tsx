@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import {
   Megaphone, ShieldCheck, Siren, Bell, Languages, Phone, Users,
   Download, Play, Building2, Clock, Eye, Sparkles,
-  CheckCircle2, Activity, HeartHandshake, Star, ArrowRight
+  CheckCircle2, Activity, HeartHandshake, ArrowRight
 } from "lucide-react";
 import SiteNav from "./SiteNav";
 import SiteFooter from "./SiteFooter";
