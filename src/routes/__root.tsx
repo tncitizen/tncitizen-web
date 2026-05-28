@@ -9,6 +9,7 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import brandLogo from "../assets/logo.png?url";
 
 function NotFoundComponent() {
   return (
@@ -72,19 +73,23 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Tamil Nadu Citizen Services Portal" },
+      { name: "description", content: "Access official Tamil Nadu government services, citizen initiatives, and community portals." },
+      { name: "author", content: "Government of Tamil Nadu" },
+      { property: "og:title", content: "Tamil Nadu Citizen Services Portal" },
+      { property: "og:description", content: "Access official Tamil Nadu government services, citizen initiatives, and community portals." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        href: brandLogo,
       },
     ],
   }),

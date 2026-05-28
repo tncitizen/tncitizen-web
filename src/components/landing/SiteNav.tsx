@@ -8,7 +8,6 @@ const nav = [
   { href: "/#app", label: "App" },
   { href: "/#how", label: "How it works" },
   { href: "/#government", label: "Government" },
-  { href: "/contact", label: "Contact" },
 ];
 
 export default function SiteNav() {

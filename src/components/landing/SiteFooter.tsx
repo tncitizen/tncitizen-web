@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { MapPin, Twitter, Facebook, Instagram, Youtube } from "lucide-react";
+import { MapPin, Mail, Twitter, Facebook, Instagram, Youtube } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 export default function SiteFooter() {
@@ -16,13 +16,23 @@ export default function SiteFooter() {
               <span className="font-bold text-white text-xl">TNCitizen</span>
             </div>
             <p className="mt-5 text-sm leading-relaxed max-w-sm">Smarter Communities, Safer Lives. A civic-tech platform connecting Tamil Nadu citizens with their government.</p>
-            <a href="https://tncitizen.in" className="mt-4 inline-flex items-center gap-2 text-emerald-300 text-sm font-semibold hover:text-emerald-200 transition">
-              <MapPin className="h-4 w-4" /> tncitizen.in
-            </a>
+            <div className="mt-4 flex flex-col gap-2">
+              <a href="https://tncitizen.in" className="inline-flex items-center gap-2 text-emerald-300 text-sm font-semibold hover:text-emerald-200 transition">
+                <MapPin className="h-4 w-4" /> tncitizen.in
+              </a>
+              <a href="mailto:hello@tncitizen.in" className="inline-flex items-center gap-2 text-emerald-300 text-sm font-semibold hover:text-emerald-200 transition" title="Reach the TNCitizen team by email">
+                <Mail className="h-4 w-4" /> hello@tncitizen.in
+              </a>
+            </div>
             <div className="mt-6 flex gap-3">
-              {[Twitter, Facebook, Instagram, Youtube].map((I, i) => (
-                <a key={i} href="#" className="h-10 w-10 rounded-full bg-white/10 hover:bg-emerald-500 flex items-center justify-center transition" aria-label="Social link">
-                  <I className="h-4 w-4" />
+              {[
+                { Icon: Twitter, href: "https://x.com/tncitizen_in", label: "Twitter" },
+                { Icon: Facebook, href: "https://facebook.com/tncitizen.in", label: "Facebook" },
+                { Icon: Instagram, href: "https://instagram.com/tncitizen.in", label: "Instagram" },
+                { Icon: Youtube, href: "https://youtube.com/@tncitizen", label: "YouTube" }
+              ].map(({ Icon, href, label }) => (
+                <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded-full bg-white/10 hover:bg-emerald-500 flex items-center justify-center transition" aria-label={label}>
+                  <Icon className="h-4 w-4" />
                 </a>
               ))}
             </div>
@@ -39,7 +49,6 @@ export default function SiteFooter() {
           <div className="md:col-span-3">
             <h4 className="text-white font-semibold text-sm uppercase tracking-wider">Company</h4>
             <ul className="mt-5 space-y-3 text-sm">
-              <li><Link to="/contact" className="hover:text-emerald-300 transition">Contact</Link></li>
               <li><Link to="/privacy" className="hover:text-emerald-300 transition">Privacy Policy</Link></li>
               <li><Link to="/terms" className="hover:text-emerald-300 transition">Terms of Use</Link></li>
               <li><a href="/#government" className="hover:text-emerald-300 transition">For Government</a></li>

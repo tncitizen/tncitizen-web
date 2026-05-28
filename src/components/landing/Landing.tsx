@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import {
   Megaphone, ShieldCheck, Siren, Bell, Languages, Phone, Users,
-  Download, Play, Building2, Clock, Eye, Sparkles,
+  Download, Play, Building2, Clock, Eye, Sparkles, Mail,
   CheckCircle2, Activity, HeartHandshake, ArrowRight
 } from "lucide-react";
 import SiteNav from "./SiteNav";
@@ -79,20 +79,37 @@ export default function Landing() {
                 <Play className="h-4 w-4 text-[#0BA37F]" /> View Demo
               </a>
             </div>
-            <div className="mt-10 flex flex-wrap items-center gap-4">
-              <div className="flex items-center gap-2 px-3.5 py-2 rounded-full bg-white shadow-sm ring-1 ring-slate-200">
-                <Building2 className="h-4 w-4 text-[#0BA37F]" />
-                <span className="text-sm font-semibold text-slate-700">50+ MLA Offices Onboarded</span>
+            <div className="mt-10 flex flex-wrap items-center gap-x-4 gap-y-3">
+              {/* Stacked Avatars representing Tamil Nadu constituencies */}
+              <div className="flex -space-x-3 overflow-hidden">
+                <div className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 text-[10px] font-bold text-white ring-2 ring-white shadow-md select-none" title="Chennai Office">
+                  CH
+                </div>
+                <div className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 text-[10px] font-bold text-white ring-2 ring-white shadow-md select-none" title="Madurai Office">
+                  MD
+                </div>
+                <div className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-amber-500 to-orange-600 text-[10px] font-bold text-white ring-2 ring-white shadow-md select-none" title="Coimbatore Office">
+                  CB
+                </div>
+                <div className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-purple-500 to-pink-600 text-[10px] font-bold text-white ring-2 ring-white shadow-md select-none" title="Trichy Office">
+                  TR
+                </div>
+                <div className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 text-[10px] font-bold text-white ring-2 ring-white shadow-md select-none" title="Salem Office">
+                  SL
+                </div>
               </div>
-              <div className="flex items-center gap-2 px-3.5 py-2 rounded-full bg-white shadow-sm ring-1 ring-slate-200">
-                <ShieldCheck className="h-4 w-4 text-[#0BA37F]" />
-                <span className="text-sm font-semibold text-slate-700">Verified by Public Departments</span>
-              </div>
-              <div className="flex items-center gap-2 px-3.5 py-2 rounded-full bg-emerald-50 shadow-sm ring-1 ring-emerald-100">
-                <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-                <span className="text-sm font-semibold text-emerald-700">Trusted across Tamil Nadu</span>
+              {/* Trust Text */}
+              <div className="flex items-center gap-2">
+                <span className="text-sm font-semibold text-slate-700 leading-none">
+                  Onboarding <span className="font-extrabold text-[#052B5B]">MLA Offices</span> & Public Departments
+                </span>
+                <span className="relative flex h-2 w-2 shrink-0">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
               </div>
             </div>
+
 
           </div>
 
@@ -323,13 +340,28 @@ export default function Landing() {
               <p className="mt-5 text-lg text-white/90 max-w-2xl mx-auto">Download the app and become part of a safer, smarter Tamil Nadu.</p>
               <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
                 <a href="https://play.google.com/store/apps/details?id=in.tncitizen.app" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 bg-white text-slate-900 px-6 py-3.5 rounded-2xl hover:scale-105 transition shadow-xl">
-                  <svg viewBox="0 0 24 24" className="h-7 w-7"><path fill="#EA4335" d="M3 20.5V3.5c0-.7.4-1.3 1-1.6l11 9.6L4 21.7c-.6-.3-1-.9-1-1.2z"/><path fill="#FBBC04" d="M16.8 13.5l-2.8 2.4 3.6 3.2c.6-.3 1-1 1-1.6 0-.7-.4-1.3-1-1.6l-.8-.4z"/><path fill="#34A853" d="M4 21.7L15 12l2.8 2.4-12.2 7c-.5.3-1.1.3-1.6.3z"/><path fill="#4285F4" d="M4 1.9l11 9.6L17.8 9 5.6 2c-.5-.3-1.1-.3-1.6-.1z"/></svg>
+                  <svg viewBox="0 0 24 24" className="h-7 w-7">
+                    <path fill="#4285F4" d="M3 20.5V3.5c0-.7.4-1.3 1-1.6l11 9.6L4 21.7c-.6-.3-1-.9-1-1.2z"/>
+                    <path fill="#FBBC04" d="M16.8 13.5l-2.8 2.4 3.6 3.2c.6-.3 1-1 1-1.6 0-.7-.4-1.3-1-1.6l-.8-.4z"/>
+                    <path fill="#34A853" d="M4 21.7L15 12l2.8 2.4-12.2 7c-.5.3-1.1.3-1.6.3z"/>
+                    <path fill="#EA4335" d="M4 1.9l11 9.6L17.8 9 5.6 2c-.5-.3-1.1-.3-1.6-.1z"/>
+                  </svg>
                   <div className="text-left"><div className="text-[10px] uppercase tracking-wide opacity-60">Get it on</div><div className="text-base font-semibold -mt-0.5">Google Play</div></div>
                 </a>
                 <div className="flex items-center gap-3 bg-white/20 backdrop-blur text-white/70 px-6 py-3.5 rounded-2xl ring-1 ring-white/20 cursor-not-allowed">
                   <svg viewBox="0 0 24 24" className="h-7 w-7 fill-white/50"><path d="M17.05 12.04c-.02-2.27 1.85-3.36 1.93-3.42-1.05-1.54-2.69-1.75-3.27-1.78-1.39-.14-2.71.82-3.42.82-.71 0-1.79-.8-2.95-.78-1.52.02-2.92.88-3.7 2.24-1.58 2.73-.4 6.78 1.13 9 .75 1.09 1.64 2.3 2.81 2.26 1.13-.04 1.55-.73 2.91-.73s1.75.73 2.94.71c1.21-.02 1.98-1.1 2.72-2.19.86-1.26 1.21-2.49 1.23-2.56-.03-.01-2.36-.91-2.38-3.57zM14.94 5.34c.62-.76 1.04-1.81.92-2.86-.9.04-1.98.6-2.62 1.36-.58.67-1.09 1.74-.95 2.77 1 .08 2.03-.51 2.65-1.27z"/></svg>
                   <div className="text-left"><div className="text-[10px] uppercase tracking-wide opacity-60">Coming Soon</div><div className="text-base font-semibold -mt-0.5 opacity-70">App Store</div></div>
                 </div>
+              </div>
+              {/* Query/Contact Callout */}
+              <div className="mt-12 pt-8 border-t border-white/20 max-w-xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-left">
+                <div className="sm:max-w-[65%]">
+                  <h4 className="text-lg font-bold text-white tracking-tight">Have a query or feedback?</h4>
+                  <p className="text-sm text-white/80 mt-1 leading-relaxed">Whether you are a citizen looking for support or a public department wishing to onboard, we read every message.</p>
+                </div>
+                <a href="mailto:hello@tncitizen.in" className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur border border-white/20 text-white font-semibold shadow-lg shadow-black/5 hover:-translate-y-0.5 transition duration-350 shrink-0">
+                  <Mail className="h-4.5 w-4.5" /> hello@tncitizen.in
+                </a>
               </div>
             </div>
           </div>
