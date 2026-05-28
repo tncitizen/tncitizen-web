@@ -88,24 +88,6 @@ export default function Landing() {
                 <span>Trusted across Tamil Nadu</span>
               </div>
             </div>
-            <div className="mt-8 grid grid-cols-3 gap-6 max-w-md">
-              {[
-                { n: "10K+", l: "Citizens" },
-                { n: "50+", l: "Constituencies" },
-                { n: "4.8", l: "App rating", star: true },
-              ].map((s, i) => (
-                <div key={i} className="relative">
-                  <div className="text-3xl font-extrabold text-[#052B5B] flex items-center gap-1">
-                    {s.n}{s.star && <Star className="h-5 w-5 fill-amber-400 text-amber-400" />}
-                  </div>
-                  <div className="text-sm font-medium text-slate-500 mt-1">{s.l}</div>
-                </div>
-              ))}
-            </div>
-            <div className="mt-6 flex items-center gap-2 text-xs font-medium text-slate-400">
-              <span className="h-px w-4 bg-slate-300" />
-              Citizens · MLA offices · Public departments
-            </div>
 
           </div>
 
