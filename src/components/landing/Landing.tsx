@@ -79,20 +79,34 @@ export default function Landing() {
                 <Play className="h-4 w-4 text-[#0BA37F]" /> View Demo
               </a>
             </div>
-            <div className="mt-12 grid grid-cols-3 gap-6 max-w-md">
+            <div className="mt-10 flex flex-wrap items-center gap-6">
+              <div className="flex items-center gap-2 text-sm text-slate-500">
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-semibold ring-1 ring-emerald-100">
+                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                  Live
+                </span>
+                <span>Trusted across Tamil Nadu</span>
+              </div>
+            </div>
+            <div className="mt-8 grid grid-cols-3 gap-6 max-w-md">
               {[
                 { n: "10K+", l: "Citizens" },
                 { n: "50+", l: "Constituencies" },
                 { n: "4.8", l: "App rating", star: true },
               ].map((s, i) => (
-                <div key={i}>
-                  <div className="text-2xl font-bold text-[#052B5B] flex items-center gap-1">
-                    {s.n}{s.star && <Star className="h-4 w-4 fill-amber-400 text-amber-400" />}
+                <div key={i} className="relative">
+                  <div className="text-3xl font-extrabold text-[#052B5B] flex items-center gap-1">
+                    {s.n}{s.star && <Star className="h-5 w-5 fill-amber-400 text-amber-400" />}
                   </div>
-                  <div className="text-xs text-slate-500 mt-0.5">{s.l}</div>
+                  <div className="text-sm font-medium text-slate-500 mt-1">{s.l}</div>
                 </div>
               ))}
             </div>
+            <div className="mt-6 flex items-center gap-2 text-xs font-medium text-slate-400">
+              <span className="h-px w-4 bg-slate-300" />
+              Citizens · MLA offices · Public departments
+            </div>
+
           </div>
 
           {/* Floating mockups */}
